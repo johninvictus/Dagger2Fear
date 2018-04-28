@@ -1,10 +1,24 @@
 package com.invictus.dagger2fear.dagger2fear.dagger.modules;
 
-import dagger.Module;
+import android.arch.lifecycle.ViewModel;
+import android.arch.lifecycle.ViewModelProvider;
 
-/**
- * Created by invictus on 4/28/18.
- */
+import com.invictus.dagger2fear.dagger2fear.dagger.qualifires.ViewModelKey;
+import com.invictus.dagger2fear.dagger2fear.viewmodel.MovieListViewModel;
+import com.invictus.dagger2fear.dagger2fear.viewmodel.ProjectViewModelFactory;
+
+import dagger.Binds;
+import dagger.Module;
+import dagger.multibindings.IntoMap;
+
 @Module
-public class ViewModelModule {
+public abstract class ViewModelModule {
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(MovieListViewModel.class)
+    abstract ViewModel bindMovieListViewModel(MovieListViewModel movieListViewModel);
+
+    @Binds
+    abstract ViewModelProvider.Factory bindViewModelFactory(ProjectViewModelFactory projectViewModelFactory);
 }
