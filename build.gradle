@@ -33,6 +33,7 @@ ext.archRuntimeVersion = '1.1.1'
 ext.archExtensionVersion = '1.1.1'
 ext.retrofitVersion = '2.3.0'
 ext.okhttpVersion = '3.4.1'
+ext.timberVersion = "4.6.1"
 
 task clean(type: Delete) {
     delete rootProject.buildDir
