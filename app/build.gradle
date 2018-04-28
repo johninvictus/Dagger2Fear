@@ -33,6 +33,22 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
     annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
 
+    //for lifecycle and LiveData and ViewModel
+    implementation "android.arch.lifecycle:runtime:$archRuntimeVersion"
+    implementation "android.arch.lifecycle:extensions:$archExtensionVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$archVersion"
+
+    implementation "android.arch.persistence.room:runtime:$archVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$archVersion"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-jackson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "com.android.support.test:runner:$runnerVersion"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"

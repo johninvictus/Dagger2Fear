@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.invictus.dagger2fear.dagger2fear.MainActivity">
+    tools:context="com.invictus.dagger2fear.dagger2fear.views.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
